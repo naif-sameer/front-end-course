@@ -465,7 +465,7 @@ html input attributes
 - `autofocus`
 - `autocomplete`
 
-## html information
+## html style Guide
 
 -   Never Skip the End Tag
 -   HTML is Not Case Sensitive but the recommended way is the lowercase
