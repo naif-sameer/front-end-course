@@ -28,8 +28,9 @@
 ```
 
 ## What is an HTML Element?
-
+```html
 <tag> Hi there✋ </tag>
+```
 
 ### Types of elements
 
