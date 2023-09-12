@@ -1,0 +1,56 @@
+
+
+body .red {
+    color: var(--color);
+}
+
+.red {
+    color: yellow;
+}
+
+.blue {
+    --blue: blue;
+    color: var(--color-red)
+}
+
+#main {
+    color: yellow
+}
+
+body main .blue {
+    color: blue
+}
+
+.home-page .card-section {
+    color: blue;
+}
+
+.home-page {
+    padding-top: 30px;
+    color: white;
+    background-color: var(--border-color);
+}
+
+
+.bg {
+   display: inline-block;
+text-align: center;
+   background: rgb(2,0,36);
+   color: red;
+   width: 200px;
+    height: 200px;
+    padding: 50px 10px 5px 0;
+    margin: 40px 10px;
+
+    /* box-sizing: border-box; */
+
+    border-color: var(--border-color );
+    border-width: 20px;
+    border-style: solid;
+
+    border-radius: 10px 20px 20px 20px;
+
+    /* background-color: transparent; */
+    /* border: 20px dashed yellow;
+    border-bottom: 10px dashed green; */
+}
