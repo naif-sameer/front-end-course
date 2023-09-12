@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html forms</title>
+</head>
+<body>
+    <a href="index.html">index page</a>
+    <h1>html forms</h1>
+    
+
+    <form  method="get">
+        <label for="username-inpput">username</label>
+        <br>
+        <input placeholder="ex: Ahmed" type="text" name="username" id="username-inpput">
+
+        <br>
+
+        <br>
+        <label for="password">password</label>
+        <br>
+        <input type="password" name="password" id="password-inpput">
+
+        <br>
+        <br>
+        <label for="email">email</label>
+        <br>
+        <input type="email" name="email" id="email">
+
+        <br>
+        <input type="hidden" name="token" value="dlkjflkdjlkfjkldj">
+
+        <br>
+        <button type="reset">reset</button>
+        <input type="submit" value="submit">
+
+
+        <!-- radio input -->
+        <div>
+            <input type="radio" name="car" id="car1">
+            <label for="car1">car 1</label>
+
+            <br>
+            <input checked type="radio" name="car" id="car2">
+            <label for="car2">car 2</label>
+        </div>
+
+        <!-- checkbox -->
+        <div>
+            <h4>choose your lang</h4>
+            <input checked type="checkbox" name="lang" id="lang">
+            <label for="lang">lang</label>
+            <br>
+            <input type="checkbox" name="lang" id="lang2">
+            <label for="lang2">lang 2</label>
+            <br>
+        </div>
+
+        <!-- select -->
+        <div>
+            <h4>select </h4>
+            <label for="laptop">choose your laptop </label>
+            <select name="laptop" id="laptop" multiple>
+                <option value="dell">dell</option>
+                <option value="apple">apple</option>
+                <option value="hp">hp</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- textarea -->
+        <div>
+            <label for="message">message</label>
+            <textarea name="message" id="message" cols="10" rows="4"></textarea>
+        </div>
+
+
+
+        <!-- search -->
+        <input type="search" name="" id="" placeholder="search">
+        <input type="url" name="" id="" value="http://" disabled>
+
+        <br>
+        <!-- number -->
+        <input type="number" step="2" style="width: 200px;" name="number" min="20" max="30" id="">
+
+
+        <!-- date -->
+        <input type="date" min="2000-01-01" value="2000-01-01" max="2024-01-01" name="" id="">
+        <br>
+        <input type="datetime-local" name="" id="">
+
+
+        <br>
+        <input type="time" autocomplete name="" id="" di>
+
+        <br>
+
+
+        <div>
+            <input list="browsers" name="browsers"> 
+            <datalist id="browsers">
+
+
+<option value="o1">o1</option>
+<option value="o2">yemen </option>
+<option value="o3">sudia arabic</option>
+            </datalist>
+        </div>
+         
+    </form>
+</body>
+</html>
