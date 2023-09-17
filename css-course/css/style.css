@@ -54,3 +54,54 @@ text-align: center;
     /* border: 20px dashed yellow;
     border-bottom: 10px dashed green; */
 }
+
+
+/* form */
+
+#div {
+
+}
+
+.div {
+
+}
+
+div {
+
+}
+
+#div .div div {
+
+}
+
+#index-page {
+    h1 {
+        color: red;
+    }
+}
+
+
+.form-group {
+    margin-bottom: 8px;
+}
+.form-group label {
+    display: block;
+    font-size: 15px;
+}
+
+.form-group input {
+    padding: 4px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-top: 4px ;
+}
+
+button {
+    padding: 4px 12px;
+    background-color: purple;
+    color: white
+    ;
+    border: 1px solid rgb(154, 1, 154);
+    font-size: 16px;
+    border-radius: 4px;
+}
