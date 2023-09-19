@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .fixed {
+            width: 100px;
+            height: 20px;
+            position: fixed;
+            top: 0;
+            left: 40px;
+            background-color: greenyellow;
+        }
+
+        .grand {
+            position: relative;
+
+            background-color: red;
+            /* top: 30px;
+            left: 40px; */
+            margin-top: 2px;
+            width: 250px;
+            height: 250px;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            /* width: 25px; */
+        }
+
+        .father {
+            position: relative;
+
+            background-color: yellow;
+            top: 0px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .child1 {
+            z-index: 2;
+        }
+
+
+        .child {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: brown;
+            bottom: 0;
+        }
+
+        .grand2 .child{
+            top: -180px;
+            background-color: blue;
+        }
+
+    /* .naif-btn {
+        background-color: blue !important;
+    }
+
+    .ahmed-btn {
+        background-color: yellow !important;
+    } */
+    </style>
+</head>
+
+<body>
+
+    <div class="fixed">
+        fixed
+    </div>
+
+    <!-- <div class="relative">
+        relative
+    </div> -->
+
+    <div class="grand">
+        <button class="btn naif-btn ahmed-btn ">
+            Xdd
+        </button>
+        grand
+        <div class="father">
+            father
+
+            <div class="child child1">
+                child
+            </div>
+        </div>
+    </div>
+    <div class="grand grand2">
+        <button class="btn naif-btn ahmed-btn ">
+            Xdd
+        </button>
+        grand
+        <div class="father">
+            father
+
+            <div class="child">
+                child
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
