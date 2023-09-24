@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .row > div {
+        border: 2px solid red;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+
+      .child > div {
+        border: 2px solid green;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      /* only print */
+      @media print {
+        .child {
+            display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-black text-white">
+      <div class="container">
+        container
+
+        <div class="row">
+          <div class="col-12">
+            card 1
+            <div class="row child p-3">
+              <div class="col-12 col-sm-6">child 1</div>
+              <div class="col-12 col-sm-6">child 2</div>
+              <div class="col-12 col-sm-6">child 3</div>
+              <div class="col-12 col-sm-6">child 4</div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            card 2
+            <div>child</div>
+          </div>
+          <div class="col-12 col-sm-6">card 2</div>
+
+          <div class="col-12 col-md-4">card 3</div>
+          <div class="col-12 col-md-4">card 3</div>
+          <div class="col-12 col-md-4">card 3</div>
+
+          <div class="col-12 col-lg-3">card 4</div>
+          <div class="col-12 col-lg-3">card 4</div>
+          <div class="col-12 col-lg-3">card 4</div>
+          <div class="col-12 col-lg-3">card 4</div>
+
+          <div class="col-12 col-xl-2">card 5</div>
+          <div class="col-12 col-xl-2">card 5</div>
+          <div class="col-12 col-xl-2">card 5</div>
+          <div class="col-12 col-xl-2">card 5</div>
+          <div class="col-12 col-xl-2">card 5</div>
+          <div class="col-12 col-xl-2">card 5</div>
+
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+          <div class="col-12 col-xxl-1">card 6</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
