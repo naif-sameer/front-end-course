@@ -63,7 +63,7 @@ skills.join("");
 
 var deg = [20, 40, 50, 35];
 
-console.log(deg);
+// console.log(deg);
 
 // for(var i = 0; i < deg.length; i++){
 
@@ -75,16 +75,16 @@ function myFun(item) {
 }
 
 deg.forEach(function (item) {
-  console.log((item / 50) * 100 + "%");
+  // console.log((item / 50) * 100 + "%");
 });
 
-var studentDeg = deg.map((item) => (item / 50) * 100 + "%");
+// var studentDeg = deg.map((item) => (item / 50) * 100 + "%");
 
-var info = [1, 2, 3, 4].map((item) => item * 2);
+// var info = [1, 2, 3, 4].map((item) => item * 2);
 
-console.log(info);
+// console.log(info);
 
-console.log(studentDeg);
+// console.log(studentDeg);
 
 // console.log(skills.join(", "), skills);
 
@@ -138,3 +138,101 @@ console.log(studentDeg);
 // var sum = (n1, n2) => n1 + n2;
 
 // console.log(sum(2, 4));
+
+var products = [
+  { title: "prp", price: 10 },
+  { title: "prp 2", price: 20 },
+  { title: "prp 3", price: 20 },
+  { title: "prp 4", price: 20 },
+  { title: "iphone", price: 20 },
+  { title: "iphone", price: 20 },
+  { title: "iphone", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+  // { title: "prp 2", price: 20 },
+];
+
+// sum
+function calcProductsPrice() {
+  // var total = 0;
+
+  // for(var i = 0; i < products.length; i++){
+  //   total += products[i].price;
+  // }
+
+  // products.forEach(function (item) {
+  //   total += item.price;
+  // })
+
+  // return total;
+
+  var total = 0;
+
+  // [
+  //   [1, 2, 3],
+  //   [4, 5, 6, 7, 8],
+  //   3
+  // ].forEach((item) => {
+  //   // total += item.reduce((previewValue, item) => previewValue + item, 0);
+
+  //   if(Array.isArray(item)){
+  //     item.forEach((subItem) => {
+  //       total += subItem
+  //     })
+  //   }
+
+  // });
+
+  // console.log(total);
+
+  // return products.reduce((previewValue, item) => previewValue + item.price, 0);
+
+  return products.reduce((prev, item) => prev + item.price, 0);
+
+  // return products.reduce(function(prev, item) {
+  //   console.log(prev, item);
+
+  //   return prev + item.price;
+  // }, 0)
+}
+
+// console.log(calcProductsPrice());
+
+function searchProductsByTitle(title) {
+  return products.filter((item) => item.title.includes(title));
+}
+
+
+var search = 'naif'
+
+console.log(searchProductsByTitle("iphone"));
+
+var app = document.querySelector("#price");
+
+// console.log(
+//   document.querySelector(".list")
+// )
+// console.log(
+//   document.querySelectorAll("[name=item]")
+// );
+
+document.querySelector("#calc").addEventListener("click", function () {
+  app.innerHTML = `
+  <div>${full_name}</div>
+
+  <br />
+
+  <div>total price ${calcProductsPrice()}</div>
+
+
+`;
+});
+
+// console.log(app);
