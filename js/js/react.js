@@ -160,11 +160,61 @@ const getStorage = (key) => {
 
   if (data) return JSON.parse(data).data;
 
- return  null;
+  return null;
 };
 
 setStorage("products", products);
 setStorage("isOnline", true);
 
 console.log(getStorage("products"));
+
+//
+
+// let isOnline = true
+
+// isOnline =  !isOnline
+
+// // console.log(isNaN('d'))
+
+const tryCatch = (callbackFunction) => {
+  try {
+    console.log(typeof callbackFunction)
+    callbackFunction();
+  } catch (error) {
+
+    /*
+    
+    
+    
+    
+    
+    
+    */
+    console.log("error", error);
+  } finally{
+    console.log('finally')
+  }
+};
+
+
+// tryCatch('test')
+
+// tryCatch(() => {
+//   el("#app2").addEventListener("click", (e) => {
+//     console.log("not working");
+//   });
+// });
+
+
+// tryCatch(() => {
+//   el("#app").addEventListener("click", (e) => {
+//     console.log("working");
+//   });
+// });
+
+
+
+
+// console.log("hi 2");
+
 
