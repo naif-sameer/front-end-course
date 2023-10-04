@@ -96,3 +96,105 @@ form.addEventListener("submit", (e) => {
 
   console.log("submit", inputEmail.value, inputPassword.value);
 });
+
+// el('#btn').click()
+// el('input').focus()
+
+let num = "20003000 dollars";
+
+// num = Number(num)
+// console.log(num)
+
+// num = parseFloat(num)
+
+// console.log(num)
+
+// num = window.parseInt(num)
+// console.log(
+//   num
+// )
+
+num = 2000.599348098409;
+
+// console.log(num.toFixed(2))
+// console.log(Math.floor(num))
+// console.log(Math.ceil(num))
+// console.log(Math.round(num))
+// console.log(Math.max(1,2,3,4))
+// console.log(Math.min(1,2,3,4))
+// console.log(Math.random() * 1000) ;
+
+function log(...param) {
+  // console.log('log', arguments)
+  console.log(...param);
+}
+
+// log(389403804938048, 30, 30, 40,40,40,40)
+
+// console.log(Math.min(...[20,30,50]))
+
+// function api(options) {
+//   if(!options.method) options.method = 'get'
+//   if(!options.isLoading ) options.isLoading = false
+
+//   // api code
+//   console.log(options.url, options)
+// }
+
+function api({ url, method = "get", isLoading = false }) {
+  // api code
+  console.log(url, method, isLoading);
+}
+
+// function api(options) {
+//   const { url, method = 'get', isLoading= false } = options;
+
+//   // api code
+//   console.log(url, method, isLoading);
+// }
+
+// api({
+//   // method: 'post',
+//   url: "https://ßgoogle.com",
+//   // isLoading: true,
+// });
+
+// const info = { name: "ali", age: 40, skills: [1,2,3] };
+
+// const info2 = {name: 'ahmed'}
+
+// let { age, name  } = info;
+
+// let {name : info2Name } = info2
+// // const info2Name = info2.name
+// console.log(info2Name)
+
+// console.log(age, info);
+
+// const skills = [1,2,3, 839408,4893084,34890348]
+
+// // const skill1 = skills[0]
+// // const skill2 = skills[1]
+// // const skill3 = skills[2]
+// const [skill1, skill2, skill3] = skills
+
+// console.log(location)
+
+// location.reload() // don't use
+
+el("#replace-btn").addEventListener("click", () => {
+  // location.replace('index.html')
+  // history.back()
+  // history.forward()
+  // history.go(2)
+  // history.go(-2)
+  // window.open('https://google.com')
+});
+
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "get",
+})
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => console.log(data));
