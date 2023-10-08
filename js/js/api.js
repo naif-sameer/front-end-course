@@ -160,30 +160,117 @@ const third = (intValue) => {
 
 // console.log(data.count)
 
-fetch("https://jsonplaceholder.typicode.com/posts/1", {
-  method: "get",
-})
-  .then((res) => res.json())
-  .then((data) => {
-    document.body.innerHTML = `
-        <div>
-            <h1>${data.title}</h1>
-            <p>${data.body}</p>
-        </div>
-    `
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "get",
+// })
+//   .then((res) => res.json())
+//   .then((data) => {
+//     document.body.innerHTML = `
+//         <div>
+//             <h1>${data.title}</h1>
+//             <p>${data.body}</p>
+//         </div>
+//     `
+//   });
+
+//   const readFiles =  (files) => {
+//     return new Promise((resolve, reject) => {
+//         // read files
+//         resolve(files)
+//     }
+//     )
+//   }
+
+// readFiles([]).then((data) => {
+
+// })
+
+const file = el("#file");
+const fileBtn = el("#file-btn");
+const image = el("#img");
+
+const fileFromLocal = getStorage("image");
+
+const log = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("log");
+      resolve("done");
+    }, 1000);
   });
+};
 
+if (fileFromLocal) {
+  image.src = fileFromLocal;
+}
 
-  const readFiles =  (files) => {
-    return new Promise((resolve, reject) => {
-        // read files 
-        resolve(files)
-    }
-    )
+fileBtn.onclick = () => {
+  file.click();
+};
+
+file.addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+
+  if (file.type.includes("image") || file.type.includes("jpg")) {
+    console.log("file is supported");
+
+    // openFile(file);
+    // console.log(fileToBase64(file));
+
+    // fileToBase64(file)
+    //   .then((data) => {
+    //     image.src = data;
+
+    //     return data;
+    //   })
+    //   .then((data) => {
+    //     console.log(data);
+
+    //     return data;
+    //   })
+    //   .then((data) => {
+    //     setStorage("image", data);
+    //   });
+
+    const data = await fileToBase64(file).catch((e) => {
+      console.log(e);
+    });
+
+    await log();
+    image.src = data;
+    setStorage("image", data);
+    console.log(e.target.files);
+
+    // log().then((data) => {
+    //   image.src = data;
+    //   setStorage("image", data);
+    //   console.log(e.target.files);
+    // });
+
+    // console.log(data);
   }
+});
 
+const fileToBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    reject("reject");
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
 
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+};
 
-readFiles([]).then((data) => {
+// var openFile = function (file) {
+//   var reader = new FileReader();
+//   reader.readAsDataURL(file);
 
-})
+//   reader.onload = function () {
+//     console.log("result", reader.result);
+
+//     setStorage("image", reader.result);
+
+//     image.src = reader.result;
+//   };
+// };

@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
-</head>
-<body>
+
+    <style>
+        #file {
+            opacity: 1;
+            position: relative;
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
 
 
+    <button class="btn btn-primary" id="file-btn">choose file</button>
+    <input id="file" type="file" accept="image/png, image/jpeg" />
 
+    <img src="" alt="" id="img" />
 
-
+    <script src="js/helpers.js"></script>
     <script src="js/api.js"></script>
-</body>
+  </body>
 </html>
