@@ -34,10 +34,30 @@ const setStorage = (key, value) => {
   );
 };
 
-const getStorage = (key) => {
+const getStorage = (key, defaultValue = null) => {
   const data = localStorage.getItem(key);
 
   if (data) return JSON.parse(data).data;
 
-  return null;
+  return defaultValue;
 };
+
+export const fileToBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    // reject("reject");
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+};
+
+
+
+export {
+  el,
+  els,
+  setStorage,
+  getStorage,
+}

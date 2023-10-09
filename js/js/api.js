@@ -1,3 +1,7 @@
+import { el, getStorage, setStorage, fileToBase64 } from "./helpers.js";
+
+// import './helpers.js'
+
 // let order = (call_production) => {
 //   setTimeout(() => {
 //     call_production();
@@ -251,16 +255,6 @@ file.addEventListener("change", async (e) => {
   }
 });
 
-const fileToBase64 = (file) => {
-  return new Promise((resolve, reject) => {
-    reject("reject");
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-  });
-};
 
 // var openFile = function (file) {
 //   var reader = new FileReader();
@@ -274,3 +268,10 @@ const fileToBase64 = (file) => {
 //     image.src = reader.result;
 //   };
 // };
+
+
+// fileBtn.getAttribute("")
+
+// fileBtn.setAttribute('test2', 'test 2 value')
+
+// console.log(fileBtn.getAttribute('data-load-after'))

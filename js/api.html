@@ -9,22 +9,21 @@
     <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
 
     <style>
-        #file {
-            opacity: 1;
-            position: relative;
-            display: none;
-        }
+      #file {
+        opacity: 1;
+        position: relative;
+        display: none;
+      }
     </style>
   </head>
   <body>
-
-
-    <button class="btn btn-primary" id="file-btn">choose file</button>
+    <button class="btn btn-primary" naif="this is naif" data-load-after="3" id="file-btn">choose file</button>
     <input id="file" type="file" accept="image/png, image/jpeg" />
 
     <img src="" alt="" id="img" />
 
-    <script src="js/helpers.js"></script>
-    <script src="js/api.js"></script>
+    <!-- <script src="js/helpers.js"></script>
+      <script src="js/api.js"></script> -->
+    <script type="module" src="js/api.js"></script>
   </body>
 </html>
