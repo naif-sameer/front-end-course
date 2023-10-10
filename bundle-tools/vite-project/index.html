@@ -1,13 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>My first App</title>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+
+    <div class="row gx-4 gy-4">
+      <div class="col-12 col-sm-6 col-md-4" data-aos="fade-left">
+        <div class="bg-danger">1 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">2 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">3 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">4 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">5 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">6 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">7 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">8 col</div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">9 col</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">10 col</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="bg-danger">11 col</div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4" data-aos="fade-left">
+        <div class="bg-danger">12 col</div>
+      </div>
+    </div>
+
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script>
+      AOS.init()
+    </script> -->
+
+    <div id="chart"></div>
+    <div id="chart2"></div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+      const data = [
+        {
+          title: "team one",
+          value: 20,
+        },
+        {
+          title: "team two",
+          value: 20,
+        },
+        {
+          title: "team two",
+          value: 20,
+        },
+        {
+          title: "team two",
+          value: 20,
+        },
+        {
+          title: "team two",
+          value: 20,
+        },
+      ];
+
+      const labels = data.map((item) => item.title);
+      const series = data.map((item) => item.value);
+
+      const options = {
+        chart: {
+          width: 500,
+          type: "pie",
+        },
+        series,
+        labels,
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+          {
+            breakpoint: 768,
+            options: {
+              chart: {
+                width: 800,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+      chart.render();
+    </script>
+    <script type="module" src="/src/main.js"></script>
+
+
+    
+    <canvas id="acquisitions"></canvas>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js
+    "></script>
+    
+    <script>
+      // <block:setup:1>
+
+        const data2 = [
+          { year: 2010, count: 10 },
+          { year: 2011, count: 20 },
+          { year: 2012, count: 15 },
+          { year: 2013, count: 25 },
+          { year: 2014, count: 22 },
+          { year: 2015, count: 30 },
+          { year: 2016, count: 28 },
+        ];
+
+        new Chart(document.getElementById("acquisitions"), {
+          type: "bar",
+          data: {
+            labels: data2.map((row) => row.year),
+            datasets: [
+              {
+                label: "Acquisitions by year",
+                data: data2.map((row) => row.count),
+              },
+            ],
+          },
+        });
+    </script>
   </body>
 </html>
