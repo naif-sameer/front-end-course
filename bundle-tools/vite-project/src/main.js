@@ -2,17 +2,24 @@ import "./style.css";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
+import './js/api'
 
-import "bootstrap";
+// import "bootstrap"; // js
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import ApexCharts from "apexcharts";
-
+5
 AOS.init();
+
+// import testCounter from './js/counter'
+// import testCounter from '../package.json'
+
+// console.log (testCounter)
+
 
 import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
+import { setupCounter } from "./js/counter.js";
 
 document.querySelector("#app").innerHTML = `
   <div >
@@ -217,7 +224,7 @@ var options = {
   dataLabels: {
     enabled: false,
   },
-  
+
   stroke: {
     curve: "straight",
   },

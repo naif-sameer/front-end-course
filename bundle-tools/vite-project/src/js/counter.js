@@ -7,3 +7,16 @@ export function setupCounter(element) {
   element.addEventListener('click', () => setCounter(counter + 1))
   setCounter(0)
 }
+
+
+const log = () => console.log('hello')
+
+
+
+export default {
+  log,
+  setupCounter
+}
+
+
+// export default log;
