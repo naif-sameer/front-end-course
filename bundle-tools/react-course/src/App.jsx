@@ -1,59 +1,27 @@
-import "./App.css";
+import Home from "./pages/home/Home";
 
-const Header = () => {
-  const isAdmin = false;
+// const Title = () => {
+//   const age = 21;
 
-  if (isAdmin) {
-    return (
-      <>
-        <h1>Admin header</h1>
-        <ul>
-          <li>users</li>
-          <li>permissions</li>
-        </ul>
-      </>
-    );
-  }
+//   if (age <= 5) return <div>you are very young</div>;
+//   else if (age >= 6 && age < 20) {
+//     return <div> hi you are between 6 and 20</div>;
+//   } else
+//     return (
+//       <div>
+//         you are old
+//         {/* {2 === 3 ? "okay" : "not okay"} */}
+//       </div>
+//     );
+// };
 
-  return (
-    <div>
-      <h1>Header</h1>
 
-      {/* if inside the component */}
-      {isAdmin ? (
-        <div>okay 2</div>
-      ) : (
-        <div>not okay</div>
-      )}
 
-      <ul>
-        <li>1 item</li>
-        <li>2 item</li>
-        <li>3 item</li>
-        <li>4 item</li>
-      </ul>
-    </div>
-  );
-};
-
-const Footer = () => {
-  return (
-    <>
-      <div>footer</div>
-      <div>footer 2</div>
-    </>
-  );
-};
 
 function App() {
   return (
     <div>
-      <Header />
-      <div>html here</div>
-      <h1>Vite + React</h1>
-      footer start
-      <Footer />
-      footer end
+      <Home />
     </div>
   );
 }
